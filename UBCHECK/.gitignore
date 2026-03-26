@@ -1,0 +1,16 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Django sensitive files
+.env
+db.sqlite3
+
+# Static & Media 
+media/
+staticfiles/
+
+# Environments
+.venv
+venv/
+env/
