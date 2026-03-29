@@ -1,24 +1,25 @@
-{%extends "base.html"%}
-{%block title%}
-    <title>UBCHECK</title>
-{%endblock%}
-{%block nav%}
-    <ul class="navbar-nav gap-3">
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">Infomations</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="/UBCHECK">Project</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/aboutme">About </a>
-        </li>
-    </ul>
-{%endblock%}
-{%block content%}
+{% extends "base.html" %}
+{% block title %}
+<title>UBCHECK</title>
+{% endblock %}
 
-<div class="container-fluid bg-dark"> <!-- main container dark-->
-    <header class=" my-2 py-4 container text-center"> <!--container header-->
+{% block nav %}
+<ul class="navbar-nav gap-3">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/">Infomations</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="/UBCHECK">Project</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/aboutme">About </a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid bg-dark pb-5">
+    <header class="my-2 py-4 container text-center">
         <h1 class="text-center d-inline text-light fw-bold">UB</h1>
         <h1 class="text-center d-inline text-primary fw-bold">CHECK</h1>
     </header>
@@ -26,11 +27,21 @@
     <div class="container bg-light mb-3 rounded" style="height:5px"></div>
 
     <section class="container p-4 bg-light text-light bg-opacity-25 rounded">
-        <p class="fs-3">UB<span class="text-primary">CHECK</span> คือแอปพลิเคชันบน Android ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก Scammer ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน การส่ง SMS และลิงก์อันตราย ไปจนถึงการใช้เสียงสังเคราะห์จาก AI เพื่อหลอกลวง</p>
-        <p class="fs-3">เมื่อมีสายโทรเข้าหรือ SMS ที่น่าสงสัย UBCHECK จะทำการตรวจสอบและแจ้งเตือนผู้ใช้โดยอัตโนมัติ พร้อมบล็อกเบอร์หรือข้อความที่ตรวจพบว่าเป็นอันตราย นอกจากนี้ยังสามารถสแกน QR Code และตรวจสอบ URL ได้ทันที เพื่อป้องกันไม่ให้ผู้ใช้ตกเป็นเหยื่อของเว็บไซต์ฟิชชิ่ง</p>
-        <p class="fs-3">สำหรับปัญหาเสียงสังเคราะห์ AI ที่มิจฉาชีพนำมาใช้แอบอ้างตัวตน UBCHECK มีระบบตรวจจับ Deepfake Voice ที่ช่วยวิเคราะห์ว่าเสียงที่ได้ยินเป็นเสียงมนุษย์จริงหรือเสียงที่สร้างขึ้นด้วย AI</p>
-        <p class="fs-3">นอกเหนือจากการป้องกัน UBCHECK ยังมี AI Assistant ที่พร้อมให้คำปรึกษาเบื้องต้นแก่ผู้ใช้ที่ไม่แน่ใจว่ากำลังถูกหลอกอยู่หรือเปล่า หรือสำหรับผู้ที่ตกเป็นเหยื่อแล้วและไม่รู้ว่าต้องทำอะไรต่อไป ระบบจะแนะนำขั้นตอนการรับมือตั้งแต่การอายัดบัญชีไปจนถึงการแจ้งความ เพื่อลดความเครียดและลดอุปสรรคสำหรับผู้ที่ไม่กล้าขอความช่วยเหลือ</p>
-        <p class="fs-3">ทั้งนี้ UBCHECK ยังมีระบบติดตามข่าวสารและสถิติ scam ที่กำลัง trending ในไทยแบบ real-time เพื่อให้ผู้ใช้รับรู้รูปแบบกลโกงใหม่ๆ อยู่เสมอ และสามารถระวังตัวได้ก่อนที่จะตกเป็นเหยื่อ</p>
+        <p class="fs-3">UB<span class="text-primary">CHECK</span> คือแอปพลิเคชันบน Android
+            ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก Scammer ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน
+            การส่ง SMS และลิงก์อันตราย ไปจนถึงการใช้เสียงสังเคราะห์จาก AI เพื่อหลอกลวง</p>
+        <p class="fs-3">เมื่อมีสายโทรเข้าหรือ SMS ที่น่าสงสัย UBCHECK จะทำการตรวจสอบและแจ้งเตือนผู้ใช้โดยอัตโนมัติ
+            พร้อมบล็อกเบอร์หรือข้อความที่ตรวจพบว่าเป็นอันตราย นอกจากนี้ยังสามารถสแกน QR Code และตรวจสอบ URL ได้ทันที
+            เพื่อป้องกันไม่ให้ผู้ใช้ตกเป็นเหยื่อของเว็บไซต์ฟิชชิ่ง</p>
+        <p class="fs-3">สำหรับปัญหาเสียงสังเคราะห์ AI ที่มิจฉาชีพนำมาใช้แอบอ้างตัวตน UBCHECK มีระบบตรวจจับ Deepfake
+            Voice ที่ช่วยวิเคราะห์ว่าเสียงที่ได้ยินเป็นเสียงมนุษย์จริงหรือเสียงที่สร้างขึ้นด้วย AI</p>
+        <p class="fs-3">นอกเหนือจากการป้องกัน UBCHECK ยังมี AI Assistant
+            ที่พร้อมให้คำปรึกษาเบื้องต้นแก่ผู้ใช้ที่ไม่แน่ใจว่ากำลังถูกหลอกอยู่หรือเปล่า
+            หรือสำหรับผู้ที่ตกเป็นเหยื่อแล้วและไม่รู้ว่าต้องทำอะไรต่อไป
+            ระบบจะแนะนำขั้นตอนการรับมือตั้งแต่การอายัดบัญชีไปจนถึงการแจ้งความ
+            เพื่อลดความเครียดและลดอุปสรรคสำหรับผู้ที่ไม่กล้าขอความช่วยเหลือ</p>
+        <p class="fs-3">ทั้งนี้ UBCHECK ยังมีระบบติดตามข่าวสารและสถิติ scam ที่กำลัง trending ในไทยแบบ real-time
+            เพื่อให้ผู้ใช้รับรู้รูปแบบกลโกงใหม่ๆ อยู่เสมอ และสามารถระวังตัวได้ก่อนที่จะตกเป็นเหยื่อ</p>
     </section>
 
     <div class="container bg-light my-3 rounded" style="height:5px"></div>
@@ -38,11 +49,12 @@
     <section class="container text-light mt-5">
         <div class="d-flex justify-content-between my-3">
             <h2 class="text-center">ฟังก์ชันที่คาดว่าจะมีของ UB<span class="text-primary fw-bold">CHECK</span></h2>
-            <button id="my_btn" type="button" class="btn btn-primary" >แสดงรายละเอียดเพิ่มเติม</button>
+            <button id="my_btn" type="button" class="btn btn-primary">แสดงรายละเอียดเพิ่มเติม</button>
         </div>
 
-        <div class="container">
-            <div class="row bg-light bg-opacity-25 p-3 rounded justify-content-between">
+        <div class="container d-flex flex-column gap-2 p-0">
+
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
                 <div class="col-auto">
                     <div class="container d-flex p-0">
                         <div class="my-auto">
@@ -50,26 +62,50 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-4 m-0">Call Screening + Community Alert</p>
-                            <p class="m-0">คัดกรองเบอร์โทรขาเข้าแบบ real-time เทียบกับฐานข้อมูล scam และกระจายแจ้งเตือนชุมชนทันทีเมื่อมี report ใหม่ คล้าย Waze</p>
+                            <p class="m-0 text-white-50">คัดกรองเบอร์โทรขาเข้าแบบ real-time และกระจายแจ้งเตือนชุมชน</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-auto my-auto ">
+                <div class="col-auto my-auto">
                     <span class="badge text-bg-success fs-5 text-center">Must have</span>
                 </div>
-                <div class="container mt-2 d-none" id="details" style="padding-left:55px;">
-                    <ul>
-                        <li>มีสายเข้า Android OS ตรวจจับสายเข้าผ่าน CallScreeningService — แอปรับ event โดยอัตโนมัติโดยไม่ต้องเปิดแอปค้างไว้</li>
-                        <li>ส่งเบอร์ไปตรวจสอบ Backend Flutter ส่งเบอร์โทรศัพท์ไปยัง FastAPI endpoint ผ่าน HTTPS แบบ real-time ก่อนผู้ใช้รับสาย</li>
-                        <li>เช็ค Phone DB + Blacklist Backend ค้นหาเบอร์ใน PostgreSQL (ฐานข้อมูล scam) และ Redis (cache สำหรับความเร็ว) พร้อมเช็ค blacklist จากแหล่งภายนอก</li>
-                        <li>แสดงผลบนหน้าจอ แอปแสดง label ทับบนหน้าสาย — 🔴 เสี่ยงสูง / 🟡 น่าสงสัย / 🟢 ปลอดภัย / ⚪ ไม่รู้จัก พร้อมจำนวนครั้งที่ถูก report</li>
-                        <li>ผู้ใช้ Report เบอร์ใหม่ หลังวางสาย ผู้ใช้กด report พร้อมระบุประเภท เช่น Call center, สินเชื่อ, แก๊งคอลเซ็นเตอร์ — ข้อมูลบันทึกลง PostgreSQL</li>
-                        <li>Community Alert กระจายแจ้งเตือน เมื่อเบอร์ถูก report ครบ threshold ที่กำหนด Backend broadcast ผ่าน WebSocket แจ้งเตือนผู้ใช้ทุกคนที่ online อยู่ทันที คล้าย Waze</li>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>มีสายเข้า Android OS ตรวจจับสายเข้าผ่าน CallScreeningService — แอปรับ event โดยอัตโนมัติ
+                        </li>
+                        <li>ส่งเบอร์ไปตรวจสอบ Backend Flutter ส่งเบอร์โทรศัพท์ไปยัง FastAPI endpoint ผ่าน HTTPS</li>
+                        <li>เช็ค Phone DB + Blacklist Backend ค้นหาเบอร์ใน PostgreSQL และ Redis</li>
+                        <li>แสดงผลบนหน้าจอ แอปแสดง label — 🔴 เสี่ยงสูง / 🟡 น่าสงสัย / 🟢 ปลอดภัย</li>
+                        <li>ผู้ใช้ Report เบอร์ใหม่ หลังวางสาย ผู้ใช้กด report บันทึกลง PostgreSQL</li>
+                        <li>Community Alert กระจายแจ้งเตือนผ่าน WebSocket เมื่อถึง threshold ที่กำหนด</li>
                     </ul>
+                </div>
+            </div>
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
+                <div class="col-auto">
+                    <div class="container d-flex p-0">
+                        <div class="my-auto">
+                            <i class="bi bi-2-circle-fill fs-2"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-4 m-0">SMS + Link + QR Scanner</p>
+                            <p class="m-0 text-white-50">อ่าน SMS อัตโนมัติ, ตรวจ phishing URL และสแกน QR Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-auto">
+                    <span class="badge text-bg-success fs-5 text-center">Must have</span>
+                </div>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>รับข้อมูล 3 ช่องทาง: READ_SMS (Android), Paste URL เอง และสแกนจากกล้อง</li>
+                        <li>Decode QR / Extract URL: mobile_scanner และ NLP สำหรับดึงลิงก์จากข้อความ</li>
+                        <li>วิเคราะห์ URL: PhishTank, Whois API (domain age), SSL Check และ NLP pattern</li>
+                        <li>คำนวณ Risk Score: 0–100 พร้อมระบุ Scam Type (Fake bank, Investment fraud ฯลฯ)</li>
+                        <li>แสดงผลและแจ้งเตือน: แสดงผลลัพธ์พร้อมเหตุผลความเสี่ยง และมีปุ่ม Report</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section> <!--features naja-->
-
-</div>
-
-{%endblock%}
+    </section>
+</div> {% endblock %}
