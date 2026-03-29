@@ -15,10 +15,21 @@
         <a class="nav-link" href="/aboutme">About </a>
     </li>
 </ul>
+<ul class="navbar-nav gap-3">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#what-is">UBCHECK คืออะไร ?</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#functions">ฟังก์ชัน</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Stack </a>
+    </li>
+</ul>
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid bg-dark pb-5">
+<div  id="what-is"  class="container-fluid bg-dark pb-5">
     <header class="my-2 py-4 container text-center">
         <h1 class="text-center d-inline text-light fw-bold">UB</h1>
         <h1 class="text-center d-inline text-primary fw-bold">CHECK</h1>
@@ -26,27 +37,27 @@
 
     <div class="container bg-light mb-3 rounded" style="height:5px"></div>
 
-    <section class="container p-4 bg-light text-light bg-opacity-25 rounded">
-        <p class="fs-3">UB<span class="text-primary">CHECK</span> คือแอปพลิเคชันบน Android
+    <section class="container p-4 bg-light text-light bg-opacity-25 rounded fs-4">
+        <p>UB<span class="text-primary fw-bold">CHECK</span> คือแอปพลิเคชันบน Android
             ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก Scammer ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน
             การส่ง SMS และลิงก์อันตราย ไปจนถึงการใช้เสียงสังเคราะห์จาก AI เพื่อหลอกลวง</p>
-        <p class="fs-3">เมื่อมีสายโทรเข้าหรือ SMS ที่น่าสงสัย UBCHECK จะทำการตรวจสอบและแจ้งเตือนผู้ใช้โดยอัตโนมัติ
+        <p>เมื่อมีสายโทรเข้าหรือ SMS ที่น่าสงสัย UBCHECK จะทำการตรวจสอบและแจ้งเตือนผู้ใช้โดยอัตโนมัติ
             พร้อมบล็อกเบอร์หรือข้อความที่ตรวจพบว่าเป็นอันตราย นอกจากนี้ยังสามารถสแกน QR Code และตรวจสอบ URL ได้ทันที
             เพื่อป้องกันไม่ให้ผู้ใช้ตกเป็นเหยื่อของเว็บไซต์ฟิชชิ่ง</p>
-        <p class="fs-3">สำหรับปัญหาเสียงสังเคราะห์ AI ที่มิจฉาชีพนำมาใช้แอบอ้างตัวตน UBCHECK มีระบบตรวจจับ Deepfake
+        <p>สำหรับปัญหาเสียงสังเคราะห์ AI ที่มิจฉาชีพนำมาใช้แอบอ้างตัวตน UBCHECK มีระบบตรวจจับ Deepfake
             Voice ที่ช่วยวิเคราะห์ว่าเสียงที่ได้ยินเป็นเสียงมนุษย์จริงหรือเสียงที่สร้างขึ้นด้วย AI</p>
-        <p class="fs-3">นอกเหนือจากการป้องกัน UBCHECK ยังมี AI Assistant
+        <p>นอกเหนือจากการป้องกัน UBCHECK ยังมี AI Assistant
             ที่พร้อมให้คำปรึกษาเบื้องต้นแก่ผู้ใช้ที่ไม่แน่ใจว่ากำลังถูกหลอกอยู่หรือเปล่า
             หรือสำหรับผู้ที่ตกเป็นเหยื่อแล้วและไม่รู้ว่าต้องทำอะไรต่อไป
             ระบบจะแนะนำขั้นตอนการรับมือตั้งแต่การอายัดบัญชีไปจนถึงการแจ้งความ
             เพื่อลดความเครียดและลดอุปสรรคสำหรับผู้ที่ไม่กล้าขอความช่วยเหลือ</p>
-        <p class="fs-3">ทั้งนี้ UBCHECK ยังมีระบบติดตามข่าวสารและสถิติ scam ที่กำลัง trending ในไทยแบบ real-time
+        <p>ทั้งนี้ UBCHECK ยังมีระบบติดตามข่าวสารและสถิติ scam ที่กำลัง trending ในไทยแบบ real-time
             เพื่อให้ผู้ใช้รับรู้รูปแบบกลโกงใหม่ๆ อยู่เสมอ และสามารถระวังตัวได้ก่อนที่จะตกเป็นเหยื่อ</p>
     </section>
 
     <div class="container bg-light my-3 rounded" style="height:5px"></div>
 
-    <section class="container text-light mt-5">
+    <section id="functions" class="container text-light mt-5">
         <div class="d-flex justify-content-between my-3">
             <h2 class="text-center">ฟังก์ชันที่คาดว่าจะมีของ UB<span class="text-primary fw-bold">CHECK</span></h2>
             <button id="my_btn" type="button" class="btn btn-primary">แสดงรายละเอียดเพิ่มเติม</button>
@@ -67,7 +78,7 @@
                     </div>
                 </div>
                 <div class="col-auto my-auto">
-                    <span class="badge text-bg-success fs-5 text-center">Must have</span>
+                    <span class="badge text-bg-success fs-5 text-center shadow">Must have</span>
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
@@ -94,7 +105,7 @@
                     </div>
                 </div>
                 <div class="col-auto my-auto">
-                    <span class="badge text-bg-success fs-5 text-center">Must have</span>
+                    <span class="badge text-bg-success fs-5 text-center shadow">Must have</span>
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
@@ -106,6 +117,132 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
+                <div class="col-auto">
+                    <div class="container d-flex p-0">
+                        <div class="my-auto">
+                            <i class="bi bi-3-circle-fill fs-2"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-4 m-0">History + Trending Dashboard </p>
+                            <p class="m-0 text-white-50">ประวัติการตรวจสอบส่วนตัว + สถิติ scam ที่กำลัง trending ในไทยแบบ real-time พร้อมกราฟและ Top 10 เบอร์อันตราย</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-auto">
+                    <span class="badge text-bg-success fs-5 text-center shadow">Must have</span>
+                </div>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>บันทึก Log ทุก action ทุกครั้งที่ผู้ใช้ตรวจสอบ (เบอร์, SMS, QR, เสียง) ระบบบันทึก log ลง PostgreSQL พร้อม timestamp, ผลลัพธ์ และ Risk Score</li>
+                        <li>หน้า My History ผู้ใช้เห็นประวัติการตรวจสอบทั้งหมดของตัวเอง กรองตามประเภท (เบอร์ / SMS / QR / เสียง) และวันที่ กดดู detail แต่ละรายการได้</li>
+                        <li>Trending Engine รวบรวม Community data Backend รวบรวม report ทั้งหมดจากผู้ใช้ทุกคน คำนวณ stats เช่น เบอร์ที่ถูก report มากที่สุด, ประเภท scam ที่กำลัง trending, domain อันตรายใหม่ที่เพิ่งถูกพบ</li>
+                        <li>หน้า Trending Dashboard แสดงกราฟและ Top list แบบ real-time เช่น Top 10 เบอร์อันตราย, สถิติ scam แยกตามประเภทและภูมิภาค, กราฟ trend รายสัปดาห์/เดือน</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
+                <div class="col-auto">
+                    <div class="container d-flex p-0">
+                        <div class="my-auto">
+                            <i class="bi bi-4-circle-fill fs-2"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-4 m-0">Auth — ระบบสมาชิก </p>
+                            <p class="m-0 text-white-50">Login / Register + JWT Token + bcrypt + Rate limiting ป้องกัน spam report + ข้อมูลเข้ารหัสทั้งหมด</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-auto">
+                    <span class="badge text-bg-success fs-5 text-center shadow">Must have</span>
+                </div>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>สมัครสมาชิก ผู้ใช้กรอก email + password — Backend hash รหัสผ่านด้วย bcrypt ก่อนบันทึกลง PostgreSQL ไม่เก็บ plain text เด็ดขาด</li>
+                        <li>เข้าสู่ระบบ + รับ JWT Token เมื่อ login สำเร็จ Backend ส่ง JWT Access Token (อายุ 1 ชั่วโมง) + Refresh Token (อายุ 30 วัน) กลับมา — Flutter เก็บ token ใน Secure Storage</li>
+                        <li>ทุก Request แนบ JWT ทุก API call แนบ Authorization: Bearer token ใน header — Backend ตรวจสอบ token ก่อนประมวลผลทุกครั้ง</li>
+                        <li>Rate Limiting + Security จำกัด report ได้สูงสุด 10 ครั้ง/ชั่วโมง/user เพื่อป้องกัน spam — ข้อมูลประวัติการตรวจสอบเข้ารหัสใน database</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
+                <div class="col-auto">
+                    <div class="container d-flex p-0">
+                        <div class="my-auto">
+                            <i class="bi bi-5-circle-fill fs-2"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-4 m-0">Post-call AI Voice Analyzer </p>
+                            <p class="m-0 text-white-50">อัปโหลดเสียงหลังวางสาย — Whisper แปลงเป็นข้อความ, LCNN ตรวจจับ Deepfake Voice, Claude วิเคราะห์ scam pattern</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-auto">
+                    <span class="badge text-bg-primary fs-5 text-center shadow">Should have</span>
+                </div>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>อัปโหลดไฟล์เสียง ผู้ใช้อัปโหลดไฟล์เสียงจากการโทรที่น่าสงสัย รองรับ .mp3, .wav, .m4a — หรือบันทึกเสียงผ่านกล้อง speaker โดยตรงบนแอป</li>
+                        <li>Whisper — Speech-to-Text Whisper API แปลงเสียงเป็นข้อความภาษาไทย รองรับสำเนียงและภาษาพูดทั่วไป ได้ transcript ที่ค่อนข้างแม่นยำ</li>
+                        <li>LCNN — Deepfake Detection โมเดล LCNN (Light CNN) วิเคราะห์ waveform เสียงโดยตรง ตรวจหา artifact ที่เสียงสังเคราะห์จาก AI มักทิ้งไว้ เช่น spectral inconsistency, unnatural prosody — train บน ASVspoof 2021 dataset</li>
+                        <li>Claude API — Pattern Analysisส่ง transcript ให้ Claude วิเคราะห์ว่ามี scam pattern หรือไม่ เช่น เร่งโอนเงิน ("โอนภายใน 30 นาที"), แอบอ้างหน่วยงาน ("ผมเป็นตำรวจ DSI"), สร้างความกลัว ("บัญชีคุณถูกอายัด"), สร้างความโลภ ("ได้รับรางวัล")</li>
+                        <li>รวมผลและแสดง Report แสดงผลรวม: Deepfake Score (จาก LCNN) + Scam Pattern Score (จาก Claude) + Transcript ข้อความ + highlight ส่วนที่น่าสงสัย + คำแนะนำว่าควรทำอะไรต่อ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
+                <div class="col-auto">
+                    <div class="container d-flex p-0">
+                        <div class="my-auto">
+                            <i class="bi bi-6-circle-fill fs-2"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-4 m-0">AI Chat Assistant</p>
+                            <p class="m-0 text-white-50">"โดนหลอกทำยังไง?" — Claude แนะนำขั้นตอน step-by-step ตั้งแต่อายัดบัญชีจนถึงแจ้ง ปปง. พร้อม quick action กดโทรหาธนาคารได้เลย</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-auto">
+                    <span class="badge text-bg-primary fs-5 text-center shadow">Should have</span>
+                </div>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>ผู้ใช้เปิดหน้า Chat ผู้ใช้พิมพ์อธิบายสถานการณ์ที่เจออยู่ เช่น "มีคนโทรบอกว่าได้รับรางวัล ให้โอนค่าธรรมเนียมก่อน" หรือ "โอนเงินไปแล้ว ทำยังไงดี"</li>
+                        <li>ส่งข้อความไปยัง Claude API Backend ส่ง system prompt ที่มี context เกี่ยวกับ scam ไทย + ข้อมูลหน่วยงานที่เกี่ยวข้อง + เบอร์ด่วนธนาคารไทย รวมกับคำถามของผู้ใช้ไปยัง Claude API</li>
+                        <li>Claude วิเคราะห์และตอบ Claude ระบุว่าเป็น scam pattern ประเภทไหน และให้คำแนะนำ step-by-step เช่น ถ้าโอนเงินไปแล้ว: (1) โทรธนาคารขอ อายัดบัญชีปลายทาง (2) แจ้งความออนไลน์ที่ thaipoliceonline.com (3) แจ้ง ปปง. ถ้าเงินเกิน 50,000 บาท (4) เก็บ screenshot ทุกอย่างไว้เป็นหลักฐาน</li>
+                        <li>แสดงผลพร้อม Quick Action แสดงคำตอบพร้อมปุ่ม quick action เช่น ปุ่มโทรหาธนาคาร, ปุ่มเปิดเว็บแจ้งความ, ปุ่มบันทึก chat เป็น PDF เพื่อเอาไปแจ้งความ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
+                <div class="col-auto">
+                    <div class="container d-flex p-0">
+                        <div class="my-auto">
+                            <i class="bi bi-7-circle-fill fs-2"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-4 m-0">Background Service</p>
+                            <p class="m-0 text-white-50">Android Foreground Service monitor สายเข้าและ SMS ตลอดเวลาโดยไม่ต้องเปิดแอปค้างไว้ แจ้งเตือน notification ทันที</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto my-auto">
+                    <span class="badge text-bg-secondary fs-5 text-center shadow">Nice to have</span>
+                </div>
+                <div class="container mt-2 details" style="padding-left:55px;">
+                    <ul class="d-flex flex-column gap-3 m-0 py-2">
+                        <li>เปิด Background Service ผู้ใช้เปิดใช้งาน Background Protection — Android สร้าง Foreground Service ที่แสดง notification ถาวรว่า UBCHECK กำลังป้องกันอยู่</li>
+                        <li>Monitor สายเข้า Service รับ event สายเข้าจาก Android OS แม้ปิดแอปอยู่ — ตรวจสอบเบอร์และแสดง notification ทันทีว่าเบอร์นี้เสี่ยงหรือไม่</li>
+                        <li>Monitor SMS ขาเข้า รับ SMS ใหม่ผ่าน BroadcastReceiver — วิเคราะห์ URL ใน SMS อัตโนมัติ ถ้าพบ phishing link แจ้งเตือน notification ทันที</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container bg-light my-3 rounded" style="height:5px"></div>
         </div>
     </section>
 </div> {% endblock %}
