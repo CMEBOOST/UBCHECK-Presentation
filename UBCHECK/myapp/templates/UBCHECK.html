@@ -25,11 +25,14 @@
     <li class="nav-item">
         <a class="nav-link" href="#stack">Stack </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#compare">Compare </a>
+    </li>
 </ul>
 {% endblock %}
 
 {% block content %}
-<div  id="what-is"  class="container-fluid bg-dark pb-5">
+<div id="what-is" class="container-fluid bg-dark pb-5">
     <header class="my-2 py-4 container text-center">
         <h1 class="text-center d-inline text-light fw-bold">UB</h1>
         <h1 class="text-center d-inline text-primary fw-bold">CHECK</h1>
@@ -38,8 +41,10 @@
     <div class="container bg-light mb-3 rounded" style="height:5px"></div>
 
     <section class="container p-4 bg-light text-light bg-opacity-25 rounded fs-4">
-        <p>UB<span class="text-primary fw-bold">CHECK</span> คือแอปพลิเคชันบน <span style="color: rgb(77 255 173)">Android</span>
-            ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก <span class="text-danger">Scammer</span> ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน
+        <p>UB<span class="text-primary fw-bold">CHECK</span> คือแอปพลิเคชันบน <span
+                style="color: rgb(77 255 173)">Android</span>
+            ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก <span class="text-danger">Scammer</span>
+            ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน
             การส่ง SMS และลิงก์อันตราย ไปจนถึงการใช้เสียงสังเคราะห์จาก AI เพื่อหลอกลวง</p>
         <p>เมื่อมีสายโทรเข้าหรือ SMS ที่น่าสงสัย UBCHECK จะทำการตรวจสอบและแจ้งเตือนผู้ใช้โดยอัตโนมัติ
             พร้อมบล็อกเบอร์หรือข้อความที่ตรวจพบว่าเป็นอันตราย นอกจากนี้ยังสามารถสแกน QR Code และตรวจสอบ URL ได้ทันที
@@ -59,7 +64,8 @@
 
     <section id="functions" class="container text-light mt-5">
         <div class="d-flex justify-content-between my-3">
-            <h2 class="text-center m-0 my-auto">ฟังก์ชันที่คาดว่าจะมีของ UB<span class="text-primary fw-bold">CHECK</span></h2>
+            <h2 class="text-center m-0 my-auto">ฟังก์ชันที่คาดว่าจะมีของ UB<span
+                    class="text-primary fw-bold">CHECK</span></h2>
             <button id="my_btn" type="button" class="btn btn-primary">แสดงรายละเอียดเพิ่มเติม</button>
         </div>
 
@@ -99,7 +105,7 @@
                             <i class="bi bi-2-circle-fill fs-2"></i>
                         </div>
                         <div class="ms-3">
-                            <p class="fs-4 m-0">SMS + Link + QR Scanner</p>
+                            <p class="fs-4 m-0">SMS + Link + QR Scanner + Screen shot</p>
                             <p class="m-0 text-white-50">อ่าน SMS อัตโนมัติ, ตรวจ phishing URL และสแกน QR Code</p>
                         </div>
                     </div>
@@ -126,7 +132,8 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-4 m-0">History + Trending Dashboard </p>
-                            <p class="m-0 text-white-50">ประวัติการตรวจสอบส่วนตัว + สถิติ scam ที่กำลัง trending ในไทยแบบ real-time พร้อมกราฟและ Top 10 เบอร์อันตราย</p>
+                            <p class="m-0 text-white-50">ประวัติการตรวจสอบส่วนตัว + สถิติ scam ที่กำลัง trending
+                                ในไทยแบบ real-time พร้อมกราฟและ Top 10 เบอร์อันตราย</p>
                         </div>
                     </div>
                 </div>
@@ -135,10 +142,15 @@
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
-                        <li>บันทึก Log ทุก action ทุกครั้งที่ผู้ใช้ตรวจสอบ (เบอร์, SMS, QR, เสียง) ระบบบันทึก log ลง PostgreSQL พร้อม timestamp, ผลลัพธ์ และ Risk Score</li>
-                        <li>หน้า My History ผู้ใช้เห็นประวัติการตรวจสอบทั้งหมดของตัวเอง กรองตามประเภท (เบอร์ / SMS / QR / เสียง) และวันที่ กดดู detail แต่ละรายการได้</li>
-                        <li>Trending Engine รวบรวม Community data Backend รวบรวม report ทั้งหมดจากผู้ใช้ทุกคน คำนวณ stats เช่น เบอร์ที่ถูก report มากที่สุด, ประเภท scam ที่กำลัง trending, domain อันตรายใหม่ที่เพิ่งถูกพบ</li>
-                        <li>หน้า Trending Dashboard แสดงกราฟและ Top list แบบ real-time เช่น Top 10 เบอร์อันตราย, สถิติ scam แยกตามประเภทและภูมิภาค, กราฟ trend รายสัปดาห์/เดือน</li>
+                        <li>บันทึก Log ทุก action ทุกครั้งที่ผู้ใช้ตรวจสอบ (เบอร์, SMS, QR, เสียง) ระบบบันทึก log ลง
+                            PostgreSQL พร้อม timestamp, ผลลัพธ์ และ Risk Score</li>
+                        <li>หน้า My History ผู้ใช้เห็นประวัติการตรวจสอบทั้งหมดของตัวเอง กรองตามประเภท (เบอร์ / SMS / QR
+                            / เสียง) และวันที่ กดดู detail แต่ละรายการได้</li>
+                        <li>Trending Engine รวบรวม Community data Backend รวบรวม report ทั้งหมดจากผู้ใช้ทุกคน คำนวณ
+                            stats เช่น เบอร์ที่ถูก report มากที่สุด, ประเภท scam ที่กำลัง trending, domain
+                            อันตรายใหม่ที่เพิ่งถูกพบ</li>
+                        <li>หน้า Trending Dashboard แสดงกราฟและ Top list แบบ real-time เช่น Top 10 เบอร์อันตราย, สถิติ
+                            scam แยกตามประเภทและภูมิภาค, กราฟ trend รายสัปดาห์/เดือน</li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +163,8 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-4 m-0">Auth — ระบบสมาชิก </p>
-                            <p class="m-0 text-white-50">Login / Register + JWT Token + bcrypt + Rate limiting ป้องกัน spam report + ข้อมูลเข้ารหัสทั้งหมด</p>
+                            <p class="m-0 text-white-50">Login / Register + JWT Token + bcrypt + Rate limiting ป้องกัน
+                                spam report + ข้อมูลเข้ารหัสทั้งหมด</p>
                         </div>
                     </div>
                 </div>
@@ -160,10 +173,14 @@
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
-                        <li>สมัครสมาชิก ผู้ใช้กรอก email + password — Backend hash รหัสผ่านด้วย bcrypt ก่อนบันทึกลง PostgreSQL ไม่เก็บ plain text เด็ดขาด</li>
-                        <li>เข้าสู่ระบบ + รับ JWT Token เมื่อ login สำเร็จ Backend ส่ง JWT Access Token (อายุ 1 ชั่วโมง) + Refresh Token (อายุ 30 วัน) กลับมา — Flutter เก็บ token ใน Secure Storage</li>
-                        <li>ทุก Request แนบ JWT ทุก API call แนบ Authorization: Bearer token ใน header — Backend ตรวจสอบ token ก่อนประมวลผลทุกครั้ง</li>
-                        <li>Rate Limiting + Security จำกัด report ได้สูงสุด 10 ครั้ง/ชั่วโมง/user เพื่อป้องกัน spam — ข้อมูลประวัติการตรวจสอบเข้ารหัสใน database</li>
+                        <li>สมัครสมาชิก ผู้ใช้กรอก email + password — Backend hash รหัสผ่านด้วย bcrypt ก่อนบันทึกลง
+                            PostgreSQL ไม่เก็บ plain text เด็ดขาด</li>
+                        <li>เข้าสู่ระบบ + รับ JWT Token เมื่อ login สำเร็จ Backend ส่ง JWT Access Token (อายุ 1 ชั่วโมง)
+                            + Refresh Token (อายุ 30 วัน) กลับมา — Flutter เก็บ token ใน Secure Storage</li>
+                        <li>ทุก Request แนบ JWT ทุก API call แนบ Authorization: Bearer token ใน header — Backend ตรวจสอบ
+                            token ก่อนประมวลผลทุกครั้ง</li>
+                        <li>Rate Limiting + Security จำกัด report ได้สูงสุด 10 ครั้ง/ชั่วโมง/user เพื่อป้องกัน spam —
+                            ข้อมูลประวัติการตรวจสอบเข้ารหัสใน database</li>
                     </ul>
                 </div>
             </div>
@@ -176,7 +193,8 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-4 m-0">Post-call AI Voice Analyzer </p>
-                            <p class="m-0 text-white-50">อัปโหลดเสียงหลังวางสาย — Whisper แปลงเป็นข้อความ, LCNN ตรวจจับ Deepfake Voice, Claude วิเคราะห์ scam pattern</p>
+                            <p class="m-0 text-white-50">อัปโหลดเสียงหลังวางสาย — Whisper แปลงเป็นข้อความ, LCNN ตรวจจับ
+                                Deepfake Voice, Claude วิเคราะห์ scam pattern</p>
                         </div>
                     </div>
                 </div>
@@ -185,15 +203,22 @@
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
-                        <li>อัปโหลดไฟล์เสียง ผู้ใช้อัปโหลดไฟล์เสียงจากการโทรที่น่าสงสัย รองรับ .mp3, .wav, .m4a — หรือบันทึกเสียงผ่านกล้อง speaker โดยตรงบนแอป</li>
-                        <li>Whisper — Speech-to-Text Whisper API แปลงเสียงเป็นข้อความภาษาไทย รองรับสำเนียงและภาษาพูดทั่วไป ได้ transcript ที่ค่อนข้างแม่นยำ</li>
-                        <li>LCNN — Deepfake Detection โมเดล LCNN (Light CNN) วิเคราะห์ waveform เสียงโดยตรง ตรวจหา artifact ที่เสียงสังเคราะห์จาก AI มักทิ้งไว้ เช่น spectral inconsistency, unnatural prosody — train บน ASVspoof 2021 dataset</li>
-                        <li>Claude API — Pattern Analysisส่ง transcript ให้ Claude วิเคราะห์ว่ามี scam pattern หรือไม่ เช่น เร่งโอนเงิน ("โอนภายใน 30 นาที"), แอบอ้างหน่วยงาน ("ผมเป็นตำรวจ DSI"), สร้างความกลัว ("บัญชีคุณถูกอายัด"), สร้างความโลภ ("ได้รับรางวัล")</li>
-                        <li>รวมผลและแสดง Report แสดงผลรวม: Deepfake Score (จาก LCNN) + Scam Pattern Score (จาก Claude) + Transcript ข้อความ + highlight ส่วนที่น่าสงสัย + คำแนะนำว่าควรทำอะไรต่อ</li>
+                        <li>อัปโหลดไฟล์เสียง ผู้ใช้อัปโหลดไฟล์เสียงจากการโทรที่น่าสงสัย รองรับ .mp3, .wav, .m4a —
+                            หรือบันทึกเสียงผ่านกล้อง speaker โดยตรงบนแอป</li>
+                        <li>Whisper — Speech-to-Text Whisper API แปลงเสียงเป็นข้อความภาษาไทย
+                            รองรับสำเนียงและภาษาพูดทั่วไป ได้ transcript ที่ค่อนข้างแม่นยำ</li>
+                        <li>LCNN — Deepfake Detection โมเดล LCNN (Light CNN) วิเคราะห์ waveform เสียงโดยตรง ตรวจหา
+                            artifact ที่เสียงสังเคราะห์จาก AI มักทิ้งไว้ เช่น spectral inconsistency, unnatural prosody
+                            — train บน ASVspoof 2021 dataset</li>
+                        <li>Claude API — Pattern Analysisส่ง transcript ให้ Claude วิเคราะห์ว่ามี scam pattern หรือไม่
+                            เช่น เร่งโอนเงิน ("โอนภายใน 30 นาที"), แอบอ้างหน่วยงาน ("ผมเป็นตำรวจ DSI"), สร้างความกลัว
+                            ("บัญชีคุณถูกอายัด"), สร้างความโลภ ("ได้รับรางวัล")</li>
+                        <li>รวมผลและแสดง Report แสดงผลรวม: Deepfake Score (จาก LCNN) + Scam Pattern Score (จาก Claude) +
+                            Transcript ข้อความ + highlight ส่วนที่น่าสงสัย + คำแนะนำว่าควรทำอะไรต่อ</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="row more-row more bg-light bg-opacity-25 p-3 rounded mx-0 justify-content-between">
                 <div class="col-auto">
                     <div class="container d-flex p-0">
@@ -202,7 +227,8 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-4 m-0">AI Chat Assistant</p>
-                            <p class="m-0 text-white-50">"โดนหลอกทำยังไง?" — Claude แนะนำขั้นตอน step-by-step ตั้งแต่อายัดบัญชีจนถึงแจ้ง ปปง. พร้อม quick action กดโทรหาธนาคารได้เลย</p>
+                            <p class="m-0 text-white-50">"โดนหลอกทำยังไง?" — Claude แนะนำขั้นตอน step-by-step
+                                ตั้งแต่อายัดบัญชีจนถึงแจ้ง ปปง. พร้อม quick action กดโทรหาธนาคารได้เลย</p>
                         </div>
                     </div>
                 </div>
@@ -211,10 +237,16 @@
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
-                        <li>ผู้ใช้เปิดหน้า Chat ผู้ใช้พิมพ์อธิบายสถานการณ์ที่เจออยู่ เช่น "มีคนโทรบอกว่าได้รับรางวัล ให้โอนค่าธรรมเนียมก่อน" หรือ "โอนเงินไปแล้ว ทำยังไงดี"</li>
-                        <li>ส่งข้อความไปยัง Claude API Backend ส่ง system prompt ที่มี context เกี่ยวกับ scam ไทย + ข้อมูลหน่วยงานที่เกี่ยวข้อง + เบอร์ด่วนธนาคารไทย รวมกับคำถามของผู้ใช้ไปยัง Claude API</li>
-                        <li>Claude วิเคราะห์และตอบ Claude ระบุว่าเป็น scam pattern ประเภทไหน และให้คำแนะนำ step-by-step เช่น ถ้าโอนเงินไปแล้ว: (1) โทรธนาคารขอ อายัดบัญชีปลายทาง (2) แจ้งความออนไลน์ที่ thaipoliceonline.com (3) แจ้ง ปปง. ถ้าเงินเกิน 50,000 บาท (4) เก็บ screenshot ทุกอย่างไว้เป็นหลักฐาน</li>
-                        <li>แสดงผลพร้อม Quick Action แสดงคำตอบพร้อมปุ่ม quick action เช่น ปุ่มโทรหาธนาคาร, ปุ่มเปิดเว็บแจ้งความ, ปุ่มบันทึก chat เป็น PDF เพื่อเอาไปแจ้งความ</li>
+                        <li>ผู้ใช้เปิดหน้า Chat ผู้ใช้พิมพ์อธิบายสถานการณ์ที่เจออยู่ เช่น "มีคนโทรบอกว่าได้รับรางวัล
+                            ให้โอนค่าธรรมเนียมก่อน" หรือ "โอนเงินไปแล้ว ทำยังไงดี"</li>
+                        <li>ส่งข้อความไปยัง Claude API Backend ส่ง system prompt ที่มี context เกี่ยวกับ scam ไทย +
+                            ข้อมูลหน่วยงานที่เกี่ยวข้อง + เบอร์ด่วนธนาคารไทย รวมกับคำถามของผู้ใช้ไปยัง Claude API</li>
+                        <li>Claude วิเคราะห์และตอบ Claude ระบุว่าเป็น scam pattern ประเภทไหน และให้คำแนะนำ step-by-step
+                            เช่น ถ้าโอนเงินไปแล้ว: (1) โทรธนาคารขอ อายัดบัญชีปลายทาง (2) แจ้งความออนไลน์ที่
+                            thaipoliceonline.com (3) แจ้ง ปปง. ถ้าเงินเกิน 50,000 บาท (4) เก็บ screenshot
+                            ทุกอย่างไว้เป็นหลักฐาน</li>
+                        <li>แสดงผลพร้อม Quick Action แสดงคำตอบพร้อมปุ่ม quick action เช่น ปุ่มโทรหาธนาคาร,
+                            ปุ่มเปิดเว็บแจ้งความ, ปุ่มบันทึก chat เป็น PDF เพื่อเอาไปแจ้งความ</li>
                     </ul>
                 </div>
             </div>
@@ -227,7 +259,8 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-4 m-0">Background Service</p>
-                            <p class="m-0 text-white-50">Android Foreground Service monitor สายเข้าและ SMS ตลอดเวลาโดยไม่ต้องเปิดแอปค้างไว้ แจ้งเตือน notification ทันที</p>
+                            <p class="m-0 text-white-50">Android Foreground Service monitor สายเข้าและ SMS
+                                ตลอดเวลาโดยไม่ต้องเปิดแอปค้างไว้ แจ้งเตือน notification ทันที</p>
                         </div>
                     </div>
                 </div>
@@ -236,9 +269,12 @@
                 </div>
                 <div class="container mt-2 details" style="padding-left:55px;">
                     <ul class="d-flex flex-column gap-3 m-0 py-2">
-                        <li>เปิด Background Service ผู้ใช้เปิดใช้งาน Background Protection — Android สร้าง Foreground Service ที่แสดง notification ถาวรว่า UBCHECK กำลังป้องกันอยู่</li>
-                        <li>Monitor สายเข้า Service รับ event สายเข้าจาก Android OS แม้ปิดแอปอยู่ — ตรวจสอบเบอร์และแสดง notification ทันทีว่าเบอร์นี้เสี่ยงหรือไม่</li>
-                        <li>Monitor SMS ขาเข้า รับ SMS ใหม่ผ่าน BroadcastReceiver — วิเคราะห์ URL ใน SMS อัตโนมัติ ถ้าพบ phishing link แจ้งเตือน notification ทันที</li>
+                        <li>เปิด Background Service ผู้ใช้เปิดใช้งาน Background Protection — Android สร้าง Foreground
+                            Service ที่แสดง notification ถาวรว่า UBCHECK กำลังป้องกันอยู่</li>
+                        <li>Monitor สายเข้า Service รับ event สายเข้าจาก Android OS แม้ปิดแอปอยู่ — ตรวจสอบเบอร์และแสดง
+                            notification ทันทีว่าเบอร์นี้เสี่ยงหรือไม่</li>
+                        <li>Monitor SMS ขาเข้า รับ SMS ใหม่ผ่าน BroadcastReceiver — วิเคราะห์ URL ใน SMS อัตโนมัติ ถ้าพบ
+                            phishing link แจ้งเตือน notification ทันที</li>
                     </ul>
                 </div>
             </div>
@@ -249,35 +285,45 @@
 
     <section id="stack" class="container mt-5">
         <div class="text-light text-center my-5">
-            <h2 class="m-0">เทคโนโลยีที่ใช้ - Tech Stack</h2>
+            <h2 class="m-0">เทคโนโลยีที่คาดว่าจะใช้ - Tech Stack</h2>
         </div>
 
         <div class="container text-light">
             <div class="row justify-content-around gap-3">
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-primary more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://cdn.dribbble.com/userupload/26967064/file/still-3be89d19e067088ceac3605cb2db678d.png?resize=400x300" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5"
+                            src="https://cdn.dribbble.com/userupload/26967064/file/still-3be89d19e067088ceac3605cb2db678d.png?resize=400x300"
+                            alt="" height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">Flutter Dart</p>
                         <p class="m-0">Mobile App · Android</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://avatars.githubusercontent.com/u/156354296?s=280&v=4" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5" src="https://avatars.githubusercontent.com/u/156354296?s=280&v=4" alt=""
+                            height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">FastAPI (Python)</p>
                         <p class="m-0">Backend · REST + WebSocket</p>
                     </div>
                 </div>
-                
+
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-white more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://whisper-api.com/_astro/logo.ChoLlMoh.png" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5" src="https://whisper-api.com/_astro/logo.ChoLlMoh.png" alt=""
+                            height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">Whisper API</p>
                         <p class="m-0">Speech-to-Text ภาษาไทย</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-success more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://e7.pngegg.com/pngimages/353/939/png-clipart-sound-logo-acoustic-wave-wave-angle-text-thumbnail.png" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5"
+                            src="https://e7.pngegg.com/pngimages/353/939/png-clipart-sound-logo-acoustic-wave-wave-angle-text-thumbnail.png"
+                            alt="" height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">LCNN + ASVspoof 2021</p>
                         <p class="m-0">Deepfake Voice Detection</p>
@@ -285,14 +331,19 @@
                 </div>
 
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-danger more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://blog.kusho.ai/content/images/2024/11/unnamed--6-.png" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5" src="https://blog.kusho.ai/content/images/2024/11/unnamed--6-.png" alt=""
+                            height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">Claude API</p>
                         <p class="m-0">Chat + Pattern Analysis</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-warning more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2021/09/Logo_PyThaiNLP-1.png" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5"
+                            src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2021/09/Logo_PyThaiNLP-1.png"
+                            alt="" height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">HuggingFace Thai NLP</p>
                         <p class="m-0">ตรวจจับ Phishing SMS</p>
@@ -300,14 +351,20 @@
                 </div>
 
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-info more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://images.ctfassets.net/6yom6slo28h2/fJUJrqHAzWweaJZvNXgWS/446631a4e2f0cc825292c982c12e173a/postgresql.jpg?w=500&h=324&fl=progressive&q=100&fm=jpg" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5"
+                            src="https://images.ctfassets.net/6yom6slo28h2/fJUJrqHAzWweaJZvNXgWS/446631a4e2f0cc825292c982c12e173a/postgresql.jpg?w=500&h=324&fl=progressive&q=100&fm=jpg"
+                            alt="" height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">PostgreSQL + Redis</p>
                         <p class="m-0">Database + Cache</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-light more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://cdn.prod.website-files.com/61f9082050036c6c4b4899f8/69aaf08b32327195c675f01a_world-wide-web-1721717394647-2x.jpeg" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5"
+                            src="https://cdn.prod.website-files.com/61f9082050036c6c4b4899f8/69aaf08b32327195c675f01a_world-wide-web-1721717394647-2x.jpeg"
+                            alt="" height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">WebSocket</p>
                         <p class="m-0">Community Alert Real-time</p>
@@ -315,14 +372,20 @@
                 </div>
 
                 <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-warning more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://cdn-icons-png.flaticon.com/512/2345/2345436.png" alt="" height="30px;" width="30px"></div>
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5" src="https://cdn-icons-png.flaticon.com/512/2345/2345436.png" alt=""
+                            height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">mobile_scanner</p>
                         <p class="m-0">QR Code Scanner</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-primary-subtle more">
-                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://media.licdn.com/dms/image/v2/D5612AQEEuzfJisLm5w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1672650120051?e=2147483647&v=beta&t=QulHbNXUEyNxLTb6vMoF7_HsFL-5cs6YKAlSRNa8Cn0" alt="" height="30px;" width="30px"></div>
+                <div
+                    class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-primary-subtle more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img
+                            class="rounded-5"
+                            src="https://media.licdn.com/dms/image/v2/D5612AQEEuzfJisLm5w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1672650120051?e=2147483647&v=beta&t=QulHbNXUEyNxLTb6vMoF7_HsFL-5cs6YKAlSRNa8Cn0"
+                            alt="" height="30px;" width="30px"></div>
                     <div class="ms-3">
                         <p class="m-0 my-0">Playwright / BeautifulSoup</p>
                         <p class="m-0">Web Scraper · URL Analysis/p>
@@ -330,7 +393,164 @@
                 </div>
 
             </div>
-            
+        </div>
+    </section>
+
+    <section id="compare" class="container mt-5">
+        <div class="text-light text-center">
+            <h2><span class="fw-bold">UB</span><span class="text-primary fw-bold">CHECK</span> เมื่อเปรียบเทียบกัน Application อื่น</h2>
+        </div>
+
+        <div class="container">
+            <table class="table table-striped table-hover rounded">
+                <thead class="rounded">
+                    <tr>
+                        <th scope="col">Features</th>
+                        <th class="table-primary text-center fw-bold" scope="col">UB<span class="text-primary fw-bold">CHECK</span></th>
+                        <th class="text-center" scope="col">Whoscall</th>
+                        <th class="text-center" scope="col">DE-fence</th>
+                        <th  class="text-center" scope="col">Police Care</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <td colspan="6"><p class="m-0">ข้อมูลทั่วไป</p></td>
+                    </tr>
+                    <tr class="text">
+                        <th scope="row">รองรับ Android</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr class="text">
+                        <th scope="row">รองรับ iOS</th>
+                        <td class="text-center"><span class="badge rounded-pill text-bg-warning">~(future work)</span></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr class="table-success">
+                        <td colspan="6"><p class="m-0"> การคัดกรองสาย</p></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Caller ID คัดกรองเบอร์ขาเข้า</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">บล็อกสายอัตโนมัติ</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    
+                    <tr class="table-success">
+                        <td colspan="6"><p class="m-0">SMS + Link + QR + Screen shot</p></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">คัดกรอง SMS อัตโนมัติ (Android)</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ตรวจสอบ URL / Phishing link</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">วิเคราะห์ screenshot</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">วิเคราะห์ Domain age + SSL + Redirect</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">สแกน QR Code ตรวจ Phishing</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+
+                    <tr class="table-success">
+                        <td colspan="6"><p class="m-0">เสียง + Deepfake</p></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">ตรวจจับ Deepfake Voice (AI-generated)</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">วิเคราะห์ scam pattern ในเสียง</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Speech-to-Text ภาษาไทย (Whisper)</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+
+                    <tr class="table-success">
+                        <td colspan="6"><p class="m-0">AI Assistant</p></td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">AI Chat ให้คำแนะนำเมื่อถูกหลอก</th>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/9426/9426997.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                        <td class="text-center"><img src="https://cdn-icons-png.flaticon.com/512/12503/12503683.png" width="30px" height="30px" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="container mt-5">
+        <div class="text-light mb-3"><h2>สิ่งที่ทำให้ <span class="fw-bold">UB</span><span class="text-primary fw-bold">CHECK</span> นั้นแตกต่าง</h2></div>
+
+        <div class="container text-light">
+            <div class="row gap-3 justify-content-center">
+                <div class="col-12 col-md-5 d-flex more flex-column bg-light text-center bg-opacity-25 p-3 rounded">
+                    <h3>Deepfake Voice Detection</h3>
+                    <p class="m-0">ตรวจจับเสียงสังเคราะห์ AI ด้วย LCNN + ASVspoof 2021 dataset มาตรฐาน research ระดับสากล ยังไม่มีแอปไหนในทั้ง 4 รายที่ทำได้ ถือเป็น unique contribution ของโปรเจค</p>
+                </div>
+                <div class="col-12 col-md-5 d-flex more flex-column bg-light text-center bg-opacity-25 p-3 rounded">
+                    <h3>QR Code Phishing Scanner</h3>
+                    <p class="m-0">ถ่ายรูป QR Code แล้ววิเคราะห์ว่าเป็น phishing หรือ, QR Scan กำลัง trending มากในไทย แต่ยังไม่มีแอปไหนในไทยรองรับโดยตรง</p>
+                </div>
+                <div class="col-12 col-md-5 d-flex more flex-column bg-light text-center bg-opacity-25 p-3 rounded">
+                    <h3>AI Chat Assistant "โดนหลอกทำยังไง?"</h3>
+                    <p class="m-0">ให้คำแนะนำ step-by-step แบบ interactive เมื่อถูกหลอก ขับเคลื่อนด้วย Claude API เข้าใจบริบทภาษาไทยได้ดี ไม่ใช่แค่ลิงก์ไปหน้าเว็บ</p>
+                </div>
+                <div class="col-12 col-md-5 d-flex more flex-column bg-light text-center bg-opacity-25 p-3 rounded">
+                    <h3>Domain Analysis เชิงลึก</h3>
+                    <p class="m-0">วิเคราะห์ URL ลึกกว่าแอปอื่น ทั้ง domain age, SSL certificate, redirect chain และ NLP วิเคราะห์ข้อความ SMS ควบคู่กัน ไม่ใช่แค่เช็ค blacklist</p>
+                </div>
+            </div>
         </div>
     </section>
 </div> {% endblock %}

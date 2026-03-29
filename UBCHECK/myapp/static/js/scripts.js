@@ -1,6 +1,6 @@
 const allRows = document.querySelectorAll('.more-row');
 const btn = document.getElementById('my_btn')
-
+console.log(allRows)
 btn.addEventListener('click', ()=>{
     const anyopen = document.querySelector('.details.show')
 
