@@ -17,13 +17,13 @@
 </ul>
 <ul class="navbar-nav gap-3">
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#what-is">UBCHECK คืออะไร ?</a>
+        <a class="nav-link" aria-current="page" href="#">UBCHECK คืออะไร ?</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#functions">ฟังก์ชัน</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Stack </a>
+        <a class="nav-link" href="#stack">Stack </a>
     </li>
 </ul>
 {% endblock %}
@@ -38,8 +38,8 @@
     <div class="container bg-light mb-3 rounded" style="height:5px"></div>
 
     <section class="container p-4 bg-light text-light bg-opacity-25 rounded fs-4">
-        <p>UB<span class="text-primary fw-bold">CHECK</span> คือแอปพลิเคชันบน Android
-            ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก Scammer ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน
+        <p>UB<span class="text-primary fw-bold">CHECK</span> คือแอปพลิเคชันบน <span style="color: rgb(77 255 173)">Android</span>
+            ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก <span class="text-danger">Scammer</span> ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน
             การส่ง SMS และลิงก์อันตราย ไปจนถึงการใช้เสียงสังเคราะห์จาก AI เพื่อหลอกลวง</p>
         <p>เมื่อมีสายโทรเข้าหรือ SMS ที่น่าสงสัย UBCHECK จะทำการตรวจสอบและแจ้งเตือนผู้ใช้โดยอัตโนมัติ
             พร้อมบล็อกเบอร์หรือข้อความที่ตรวจพบว่าเป็นอันตราย นอกจากนี้ยังสามารถสแกน QR Code และตรวจสอบ URL ได้ทันที
@@ -59,7 +59,7 @@
 
     <section id="functions" class="container text-light mt-5">
         <div class="d-flex justify-content-between my-3">
-            <h2 class="text-center">ฟังก์ชันที่คาดว่าจะมีของ UB<span class="text-primary fw-bold">CHECK</span></h2>
+            <h2 class="text-center m-0 my-auto">ฟังก์ชันที่คาดว่าจะมีของ UB<span class="text-primary fw-bold">CHECK</span></h2>
             <button id="my_btn" type="button" class="btn btn-primary">แสดงรายละเอียดเพิ่มเติม</button>
         </div>
 
@@ -242,7 +242,95 @@
                     </ul>
                 </div>
             </div>
-            <div class="container bg-light my-3 rounded" style="height:5px"></div>
+        </div>
+    </section>
+
+    <div class="container bg-light my-3 rounded" style="height:5px"></div>
+
+    <section id="stack" class="container mt-5">
+        <div class="text-light text-center my-5">
+            <h2 class="m-0">เทคโนโลยีที่ใช้ - Tech Stack</h2>
+        </div>
+
+        <div class="container text-light">
+            <div class="row justify-content-around gap-3">
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-primary more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://cdn.dribbble.com/userupload/26967064/file/still-3be89d19e067088ceac3605cb2db678d.png?resize=400x300" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">Flutter Dart</p>
+                        <p class="m-0">Mobile App · Android</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://avatars.githubusercontent.com/u/156354296?s=280&v=4" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">FastAPI (Python)</p>
+                        <p class="m-0">Backend · REST + WebSocket</p>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-white more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://whisper-api.com/_astro/logo.ChoLlMoh.png" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">Whisper API</p>
+                        <p class="m-0">Speech-to-Text ภาษาไทย</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-success more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://e7.pngegg.com/pngimages/353/939/png-clipart-sound-logo-acoustic-wave-wave-angle-text-thumbnail.png" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">LCNN + ASVspoof 2021</p>
+                        <p class="m-0">Deepfake Voice Detection</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-danger more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://blog.kusho.ai/content/images/2024/11/unnamed--6-.png" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">Claude API</p>
+                        <p class="m-0">Chat + Pattern Analysis</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-warning more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://b2dmain-ruk.cdn.jelastic.net/wp-content/uploads/2021/09/Logo_PyThaiNLP-1.png" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">HuggingFace Thai NLP</p>
+                        <p class="m-0">ตรวจจับ Phishing SMS</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-info more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://images.ctfassets.net/6yom6slo28h2/fJUJrqHAzWweaJZvNXgWS/446631a4e2f0cc825292c982c12e173a/postgresql.jpg?w=500&h=324&fl=progressive&q=100&fm=jpg" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">PostgreSQL + Redis</p>
+                        <p class="m-0">Database + Cache</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-light more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://cdn.prod.website-files.com/61f9082050036c6c4b4899f8/69aaf08b32327195c675f01a_world-wide-web-1721717394647-2x.jpeg" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">WebSocket</p>
+                        <p class="m-0">Community Alert Real-time</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-warning more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://cdn-icons-png.flaticon.com/512/2345/2345436.png" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">mobile_scanner</p>
+                        <p class="m-0">QR Code Scanner</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 bg-light bg-opacity-25 d-flex rounded p-3 border-end border-primary-subtle more">
+                    <div class="d-flex justify-content-center align-items-center pe-2 border-end border-secondary"><img class="rounded-5" src="https://media.licdn.com/dms/image/v2/D5612AQEEuzfJisLm5w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1672650120051?e=2147483647&v=beta&t=QulHbNXUEyNxLTb6vMoF7_HsFL-5cs6YKAlSRNa8Cn0" alt="" height="30px;" width="30px"></div>
+                    <div class="ms-3">
+                        <p class="m-0 my-0">Playwright / BeautifulSoup</p>
+                        <p class="m-0">Web Scraper · URL Analysis/p>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
     </section>
 </div> {% endblock %}

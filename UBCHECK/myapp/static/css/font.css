@@ -1,3 +1,7 @@
+body{
+background: #455166;
+background: linear-gradient(112deg, rgba(69, 81, 102, 1) 22%, rgba(49, 64, 103, 1) 85%, rgba(14, 44, 48, 1) 100%);
+}
 *{
   font-family: "IBM Plex Sans Thai", sans-serif;
   font-weight: 400;
