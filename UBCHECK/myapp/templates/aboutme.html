@@ -1,22 +1,186 @@
 {%extends "base.html"%}
+{% load static %}
 {%block title%}
-    <title>About Me</title>
+<title>About Me</title>
 {%endblock%}
 {%block nav%}
-    <ul class="navbar-nav gap-3">
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">Infomations</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/UBCHECK">Project</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="/aboutme">About </a>
-        </li>
-    </ul>
+<ul class="navbar-nav gap-3">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/">Infomations</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/UBCHECK">Project</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="/aboutme">About </a>
+    </li>
+</ul>
 {%endblock%}
 {%block content%}
+<div class="container bg-light bg-opacity-10 d-flex flex-column justify-content-center">
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-6 d-flex justify-content-center">
+                <img class="img-fluid rounded text-center" src="{% static 'img/myprofile.jpg' %}" alt=""
+                    style="height: 600px;">
+            </div>
+            <div class="col-6 text-light">
+                <p>About</p>
+                <h2 class="fs-1">Surachet Seesa</h2>
+                <p class="fs-4">สวัสดีครับ ผมนายสุรเชษฐ์ สีสา</p>
+                <p class="fs-4">รหัสนักศึกษา 67114540583</p>
+                <p class="fs-4">ปัจจุบันเป็นนักศึกษาที่</p>
+                <p class="fs-4">มหาวิทยาลัยอุบลราชธานี คณะวิทยาศาสตร์</p>
+                <p class="fs-4">สาขา วิทยาการข้อมูลและนวัตกรรมซอฟต์แวร์ </p>
+                <p class="fs-4">(สาย Software) GPAX 3.68 </p>
+                <div class="d-flex gap-3 flex-column">
+                    <a href="#interest">
+                        <div class="btn btn-primary w-25">➡️ สิ่งที่สนใจ</div>
+                    </a>
+                    <a href="#skills">
+                        <div class="btn btn-primary w-25">➡️ ทักษะที่มี</div>
+                    </a>
+                    <a href="#attitude">
+                        <div class="btn btn-primary w-25">➡️ ทัศนะคติ</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<h1 class="text-center">About Me !</h1>
+    <div class="container bg-light mb-3 rounded bg-opacity-25" style="height:5px"></div>
 
+    <div id="interest" class="container text-light p-3 bg-light bg-opacity-10 rounded">
+        <h2 class="text-center fs-2">สิ่งที่สนใจ</h2>
+        <p class="fs-5">ส่วนตัวผมอยากอยู่ในสายงานที่เกี่ยวกับ <span class="text-info">Cyber Security</span> และความสนใจของผม เริ่มมาจากความโกรธและหดหู่ใจ
+            ทุกครั้งที่ผมอ่านข่าวเรื่อง Scammer
+            ผมรู้สึกสะเทือนใจที่เห็นคนต้องสูญเสียสินทรัพย์จากน้ำพักน้ำแรงไปกับองค์กรสีเทา
+            เหล่านี้ สิ่งที่น่าตกใจคือคนพวกนี้ไม่เคยหยุดนิ่ง แม้เราจะพยายามป้องกันแค่ไหน พวกเขาก็จะมีกลอุบายใหม่ๆ
+            ที่เหนือชั้นมาใช้เสมอ ความซับซ้อนและเล่ห์เหลี่ยมเหล่านี้เองที่จุดประกายให้ผมอยากเข้าไปยืนอยู่ในจุดที่สามารถ
+            'แก้เกม' และป้องกันภัยร้ายนี้ได้จริง ๆ ผมไม่ได้แค่อยากเก่งเรื่องระบบ
+            แต่ผมอยากใช้ความรู้เพื่อไม่ให้ใครต้องเป็นเหยื่อรายต่อไปครับ</p>
+    </div>
+
+    <div class="container bg-light mb-3 mt-3 bg-opacity-25" style="height:5px"></div>
+    
+    <div id="skills" class="container">
+        <div class="text-center text-light"><h2>ทักษะที่มี</h2></div>
+
+        <div class="row justify-content-around">
+            <div class="col-5 d-flex flex-column bg-light bg-opacity-10 p-3 rounded text-light">
+                <div class="text-center"><h3>Hard Skills</h3></div>
+                <p class="fs-4">ทางด้านภาษาโปรแกรมมิ่ง</p>
+                <ul class="fs-5">
+                    <li>Python, OOP Concept, Numpy, Pandas</li>
+                    <li>Basic Java</li>
+                    <li>Basic C++</li>
+                    <li>ทักษะในการสร้างเว็ป HTML CSS JS</li>
+                    <li>ฐานข้อมูล MySQL, MongoDB</li>
+                    <li>GITHUB</li>
+                </ul>
+                <div class="container bg-light my-1 bg-opacity-25" style="height:5px"></div>
+                <p class="mt-2 fs-4">ทางด้านเครื่องมือ</p>
+                <ul class="fs-5">
+                    <li>Visual Studio Code</li>
+                    <li>Figma</li>
+                    <li>Basic Linux Commands</li>
+                </ul>
+            </div>
+
+            <div class="col-5 d-flex flex-column bg-light bg-opacity-10 p-3 rounded text-light">
+                <div class="text-center"><h3>Soft Skills</h3></div>
+                <p class="fs-4">ด้านการสื่อสาร</p>
+                <ul class="fs-5">
+                    <li>ผมชอบอธิบายในสิ่งที่ตัวเองรู้หรือเข้าใจ</li>
+                    <li>รู้จักการใช้น้ำเสียงได้อย่างเหมาะสมกับผู้คน สถาณที่</li>
+                </ul>
+                <div class="container bg-light my-1 bg-opacity-25" style="height:5px"></div>
+                <p class="mt-2 fs-4">ด้านมนุษยสัมพันธ์และการทำงานร่วมกับผู้อื่น</p>
+                <ul class="fs-5">
+                    <li>ผมชอบทำงานเป็นทีม ให้ความร่วมมือเพื่อนร่วมงานเสมอ</li>
+                    <li>เข้าใจความรู้สึกของเพื่อน และแบ่งหน้าที่การทำงานชัดเจน</li>
+                </ul>
+                <div class="container bg-light my-1 bg-opacity-25" style="height:5px"></div>
+                <p class="mt-2 fs-4">ด้านการจัดการตัวเอง</p>
+                <ul class="fs-5">
+                    <li>รับผิดชอบต่องานที่ได้รับมอบหมายเสมอ</li>
+                    <li>เต็มที่กับทุกงาน ใช้ความสามารถทั้งหมดที่มี</li>
+                    <li>ตรงต่อเวลาเสมอ</li>
+                    <li>รู้จักการจัดลำดับความสำคัญของงาน</li>
+                    <li>วางแผนล่วงหน้าเสมอ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="attitude" class="container bg-light mb-3 mt-3 bg-opacity-25" style="height:5px"></div>
+     
+    <div class="container text-light text-center">
+        <div class="text-center"><h3>ทัศนะคติ Attitude</h3></div>
+
+        <div class="row fs-5 gap-1">
+            <div class="col-12 p-2 bg-light my-1 bg-opacity-10 rounded ">
+                <p class="m-0">ผมมักจะคิดว่าผมมี Growth midset เสมอ เพราะผมเชื่อว่าคนเราสามารถพัฒนากันได้ ไม่ใช่ความสามารถที่มีมาตั้งแต่เกิด</p>
+            </div>  
+            <div class="col-12 p-2 bg-light my-1 bg-opacity-10 rounded ">
+                <p class="m-0">พร้อมพัฒนาตัวเอง ทุก Feedback มีค่าสำหรับผม ดีสำหรับผมอาจจะไม่ดีสำหรับทุกคน</p>
+            </div>
+            <div class="col-12 p-2 bg-light my-1 bg-opacity-10 rounded ">
+                <p class="m-0">พร้อมเรียนรู้สิ่งไหม่ ผมรักการเรียน ผมชอบความท้าทาย</p>
+            </div>
+            <div class="col-12 p-2 bg-light my-1 bg-opacity-10 rounded ">
+                <p class="m-0">พร้อมที่จะปรับตัว ไม่ทรนงตน ไม่ข่มเหงผู้อื่น</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="attitude" class="container bg-light mb-3 mt-3 bg-opacity-25" style="height:5px"></div>
+
+    <div class="container text-light">
+        <div class="text-center"><h3>สิ่งที่ได้จากการทำ Web Presentation นี้</h3></div>
+
+        <div class="row justify-content-center gap-3">
+            <div class="col-5 bg-light my-1 bg-opacity-10 rounded p-3">
+                <h2 class="fs-3 text-center">Django Framwork</h2>
+                <ul class="fs-5 m-0">
+                    <li>MVT Model View Template Django</li>
+                    <li>URL</li>
+                    <li>View</li>
+                    <li>Migration</li>
+                </ul>
+            </div>
+            <div class="col-5 bg-light my-1 bg-opacity-10 rounded p-3">
+                <h2 class="fs-3 text-center">GitHub</h2>
+                <ul class="fs-5 m-0">
+                    <li>Create Repo</li>
+                    <li>Init</li>
+                    <li>Commit</li>
+                    <li>Branch</li>
+                </ul>
+            </div>
+            <div class="col-5 bg-light my-1 bg-opacity-10 rounded p-3">
+                <h2 class="fs-3 text-center">Bootstrap</h2>
+                <ul class="fs-5 m-0">
+                    <li>การจัดวาง Layout</li>
+                    <li>row col</li>
+                    <li>สีต่างๆ Bg</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="attitude" class="container bg-light mb-3 mt-3 bg-opacity-25" style="height:5px"></div>
+
+    <div class="container text-light bg-light mb-3 mt-3 bg-opacity-10 rounded p-3">
+        <div class="text-center">
+            <h3>ความประทับใจที่มีต่อ อาจารย์ วิชิต สมบัติ</h3>
+            <p>ผมเจออาจาร์ครั้งแรก ตอนเรียน OOP ผมชอบสไตล์การสอนของอาจารย์มากๆ ทั้งมีไฟในการสอนและทักษะมากเลยทีเดียว ผมคิดว่ามันคงจะดีไม่น้อยหากผมได้รับการสั่งสองจากอาจารย์ที่มีความรู้ความสามารถมากขนาดนี้
+                แต่เป็นที่น่าเสียดายที่ผมมีโอกาสเจออาจารย์แค่ครั้งเดียวเท่านั้น นี่เป็นโอกาสดีที่ผมจะได้รับความรู้ความสามารถจากอาจารย์อีกครั้ง ผมพร้อมที่จะได้รับการสั่งสอนและโหยหา Feedback เพื่อนำมา
+                พัฒนาตัวของผมเอง ผมรู้ว่าสิ่งที่ผมเสนอไปต้องได้รับการขัดเกลาค่อนข้างมาก และมีอีกหลายสิ่งที่ผมยังไม่รู้ แต่ผมก็พร้อมที่จะเรียนรู้เสมอครับ Presentation นี้ผมทำด้วยความมุนานะมาก พยายามใช้ตัวช่วยให้น้อยที่สุดและลงมือทำทุกด้วยตัวเองทุกขั้นตอนขอบคุณครับ 
+            </p>
+            <div class="bg-dark p-1 rounded">
+                <h3 class="m-0">UB<span class="text-primary">CHECK</span></h3>
+            </div>
+        </div>
+    </div>
+</div>
 {%endblock%}
