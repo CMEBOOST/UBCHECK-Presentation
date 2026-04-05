@@ -9,6 +9,26 @@ background: linear-gradient(112deg, rgba(69, 81, 102, 1) 22%, rgba(49, 64, 103, 
   box-sizing: border-box;
 }
 
+.nudge-shake{
+  animation: nudge-shake 0.5s ease-in-out infinite;
+}
+
+@keyframes nudge-shake {
+  0% { transform: translate(0, 0) rotate(0); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(-5px, -5px) rotate(-5deg); }
+  75% { transform: translate(5px, -5px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+
+.troll-btn{
+  transition: opacity 0.2 ease;
+}
+
+.troll-btn:hover {
+  opacity: 0;
+}
+
 
 .more-row .details{
   max-height: 0px;
@@ -263,4 +283,39 @@ background: linear-gradient(112deg, rgba(69, 81, 102, 1) 22%, rgba(49, 64, 103, 
   font-family: "Iosevka Charon", monospace;
   font-weight: 700;
   font-style: italic;
+}
+
+
+/* 1. จัดการหน้า Overlay สีดำโปร่งแสง */
+.overlay {
+    position: fixed; /* ลอยทับทุกสิ่งและไม่ขยับตามเวลาเลื่อนหน้าจอ */
+    top: 0;
+    left: 0;
+    width: 100vw; /* กว้างเต็มจอ */
+    height: 100vh; /* สูงเต็มจอ */
+    background-color: rgba(0, 0, 0, 0.7); /* สีดำ โปร่งแสง 70% */
+    z-index: 9999; /* ดันให้อยู่หน้าสุด ทับทุกอย่าง (รวมถึง nav) */
+    
+    /* จัดให้ตัวหมุนอยู่กึ่งกลางหน้าจอเสมอ */
+    display: none; /* เริ่มต้นให้ซ่อนไว้ก่อน (เดี๋ยวค่อยเปลี่ยนเป็น flex ด้วย JS) */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* ตัวอักษรสีขาว */
+}
+
+/* 2. สร้างวงกลมหมุนๆ (Spinner) */
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(255, 255, 255, 0.3); /* เส้นขอบวงกลมสีขาวหม่น */
+    border-top: 8px solid #ffffff; /* เส้นขอบด้านบนสีขาวสว่าง */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    animation: spin 1s linear infinite; /* สั่งให้หมุนแบบไม่รู้จบ */
+}
+
+/* 3. อนิเมชันการหมุน */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
