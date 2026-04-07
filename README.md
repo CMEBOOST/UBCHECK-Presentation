@@ -1,5 +1,5 @@
 # UBCHECK • กัน ก่อน โกง
-เป็น Mobile Application ป้องกัน Scamer ที่ระบาดในปัจจุบัน
+เป็น Mobile Application ที่พัฒนาขึ้นเพื่อช่วยป้องกันและรับมือกับภัยคุกคามจาก Scammer ในชีวิตประจำวัน ครอบคลุมตั้งแต่การโทรศัพท์รบกวน การส่ง SMS และลิงก์อันตราย ไปจนถึงการใช้เสียงสังเคราะห์จาก AI เพื่อหลอกลวง
 
 ## Live demo Presentation
 here https://ubcheck-presentation.onrender.com
