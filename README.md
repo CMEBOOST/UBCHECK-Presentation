@@ -1,6 +1,11 @@
-นี้คือ Web Presentation หัวข้อของ นาย สุรเชษฐ์ สีสา
-"รหัสนักศึกษา" : 67114540583
+# UBCHECK • กัน ก่อน โกง
+เป็น Mobile Application ป้องกัน Scamer ที่ระบาดในปัจจุบัน
 
--- เรียน อาจารย์ ดร. วิชิต สมบัติ --
+## Live demo Presentation
+here https://ubcheck-presentation.onrender.com
 
-เสนอหัวข้อ UBCHECK เป็น Mobile Application ป้องกัน Scamer ที่ระบาดในปัจจุบัน
+## Feature เด่น
+
+- Call Screening + Community Alert ตรวจสอบสายโทรเข้า - ออก และแจ้งความเสียง
+- SMS + Link + QR Scanner + Screen Shot ประวัติการตรวจสอบส่วนตัว + สถิติ scam ที่กำลัง trending ในไทย
+- Post-call AI Voice Analyzer อัปโหลดเสียงหลังวางสาย — Whisper แปลงเป็นข้อความ, LCNN ตรวจจับ Deepfake Voice วิเคราะห์ scam pattern
